@@ -66,6 +66,7 @@ def burger_r(request, burger_name):
 def beverages(request):
     _beverages = Beverage.objects.all()
     serializer = BeverageSerializer(_beverages, many=True)
+    print(serializer)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 

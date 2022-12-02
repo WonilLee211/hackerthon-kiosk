@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     path('makedb/', views.makeDB, name='makeDB'),
     # menus
-    path('menus/', views.menus, name='menus'),
+    # path('menus/', views.menus, name='menus'),
 
     # burgers
     path('burgers/', views.burgers, name='burgers'),

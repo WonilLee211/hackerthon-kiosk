@@ -3,8 +3,8 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from back.orders.models import Order
-from back.orders.serializers import OrderItemSerializer, OrderSerializer
+from .models import Order
+from .serializers import OrderItemSerializer, OrderSerializer
 
 burgerNames = ["더블_비프_미트_칠리_버거", "맥크리스피_클래식_버거", "미트_칠리_BLT버거", "빅맥"]
 # burgerprices = [7500, 5600, 7000, 4900]

@@ -14,20 +14,22 @@ function App() {
     }, [])
 
     const getProduct = (event) => {
-        axios.get("") // request보낼때, 8개만 보내주라고 body랑 같이 보냄
-        .then(function(response){
-            // setProducts(response.data);
-        }).catch(function(event){
-            // alert("상품목록을 가져오는데 실패했습니다.");
+        axios.get("http://127.0.0.1:8000/api/v1/beverages/") // request보낼때, 8개만 보내주라고 body랑 같이 보냄
+        .then(function (response) {
+            setProducts(response.data);
+        }).catch(function (event) {
+            console.log(event)
+            alert("상품목록을 가져오는데 실패했습니다.");
         })
     }
 
     const renderCards = Products.map((product, index) => {
+        console.log('http://localhost:8000/' + product.image)
         return <Col key={index}> 
             <Card className={styles.card}
-                // cover = {Products.length > 6 ? <img src={Products.slice(0,6)}/> : <img src={product.files}/>} //가져온 데이터의 이미지 띄우기
-                // title={product.Title}
-                // description={product.Description} // 상세정보 
+                cover={<img src={'http://127.0.0.1:8000/' + product.image} />} //가져온 데이터의 이미지 띄우기
+                title={product.Title}
+                description={product.Description} // 상세정보 
             >
             </Card>
         </Col>

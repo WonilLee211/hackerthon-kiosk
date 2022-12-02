@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Card, Row, Col } from "antd";
 import Navbar from "../Navbar/Navbar";
 import styles from './Main.module.css';
+import qrcode from '../assets/qrcode.png';
 
 function App() {
     const [Products, setProducts] = useState([])
@@ -13,20 +14,20 @@ function App() {
     }, [])
 
     const getProduct = (event) => {
-        axios.get("") // request������, 8���� �����ֶ�� body�� ���� ����
+        axios.get("") // request보낼때, 8개만 보내주라고 body랑 같이 보냄
         .then(function(response){
             // setProducts(response.data);
         }).catch(function(event){
-            // alert("��ǰ����� �������µ� �����߽��ϴ�.");
+            // alert("상품목록을 가져오는데 실패했습니다.");
         })
     }
 
     const renderCards = Products.map((product, index) => {
         return <Col key={index}> 
             <Card className={styles.card}
-                // cover = {Products.length > 6 ? <img src={Products.slice(0,6)}/> : <img src={product.files}/>} //������ �������� �̹��� ����
+                // cover = {Products.length > 6 ? <img src={Products.slice(0,6)}/> : <img src={product.files}/>} //가져온 데이터의 이미지 띄우기
                 // title={product.Title}
-                // description={product.Description} // ������ 
+                // description={product.Description} // 상세정보 
             >
             </Card>
         </Col>
@@ -34,21 +35,28 @@ function App() {
 
     return (
         <div>
-            <div className={styles.mainbox}>
-                <Navbar />
-            </div>
+            <Navbar />
             
             <Row>
                 {renderCards}  
             </Row>
 
+            <div className={styles.qrbox}>
+                <img src={qrcode} /> <br />
+                <span>빠른 결제를 위해</span> <br />
+                <span>Easy Kiosk를 사용해 보세요</span> <br />
+                <span>1. Easy Kiosk를 연다</span> <br />
+                <span>2. QR 코드를 찍는다</span> <br />
+                <span>3. 주문을 한다</span> <br />
+                <span>4. 제품을 수령한다</span>
+            </div>
             <div className={styles.bottombox2}>
-                <span className={styles.total}>�� ���� �ݾ�</span>
-                <span className={styles.account}>x,xxx��</span>
+                <span className={styles.total}>총 결제 금액</span>
+                <span className={styles.account}>x,xxx원</span>
             </div>
             <div className={styles.bottombox1}>
                 <Link to=''>
-                    <span className={styles.calbtn}>�����ϱ�</span>
+                    <span className={styles.calbtn}>결제하기</span>
                 </Link>
             </div>
         </div>

@@ -6,44 +6,47 @@
     background: #FFE4E1;
 }
 
-.Title{
+.qrbox {
     position: absolute;
-    width: 66px;
-    height: 29px;
-    left: 154px;
-    top: 0px;
+    top: 35%;
+    right: 5%;
+    width: 320px;
+    height: 400px;
     
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    
     text-align: center;
-    letter-spacing: -0.165px;
-    
-    color: #000000;
+    background-color: #B70000;
 }
 
 .bottombox1 {
     position: absolute;
-    width: max-content;
-    height: 50px;
+    width: initial;
+    height: 100px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 
-    color: #484040;
+    background-color: #484040;
 }
 
 .bottombox2 {
     position: absolute;
-    width: max-content;
+    width: initial;
     height: 50px;
+    left: 0px;
+    right: 0px;
+    bottom: 100px;
 
-    color: #292929;
+    background-color: #292929;
 }
 
 .total{
     position: absolute;
+    top: 15%;
+    right: 20%;
     width: fit-content;
     height: fit-content;
     
@@ -55,6 +58,8 @@
 
 .account {
     position: absolute;
+    top: 15%;
+    right: 5%;
     width: fit-content;
     height: fit-content;
     
@@ -74,7 +79,14 @@
 }
 
 .calbtn {
-    position:absolute;
-    width: 100px;
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    width: 200px;
     height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #E30613;
 }

@@ -2,6 +2,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
+    path('makedb/', views.makeDB, name='makeDB'),
     # menus
     path('menus/', views.menus, name='menus'),
 

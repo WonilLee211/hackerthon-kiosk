@@ -1,0 +1,12 @@
+.label{
+    background-color: #484040;
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    height:60px;
+    align-items: center;
+    justify-content: space-around;
+}
+@Header{
+    background-color: #484040;
+}

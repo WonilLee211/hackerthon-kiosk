@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Card, Row, Col } from "antd";
 import Navbar from "../Navbar/Navbar";
 import styles from './Main.module.css';
+import qrcode from '../assets/qrcode.png';
 
 function App() {
     const [Products, setProducts] = useState([])
@@ -40,6 +41,15 @@ function App() {
                 {renderCards}  
             </Row> */}
 
+            <div className={styles.qrbox}>
+                <img src={qrcode} /> <br />
+                <span>빠른 결제를 위해</span> <br />
+                <span>Easy Kiosk를 사용해 보세요</span> <br />
+                <span>1. Easy Kiosk를 연다</span> <br />
+                <span>2. QR 코드를 찍는다</span> <br />
+                <span>3. 주문을 한다</span> <br />
+                <span>4. 제품을 수령한다</span>
+            </div>
             <div className={styles.bottombox2}>
                 <span className={styles.total}>총 결제 금액</span>
                 <span className={styles.account}>x,xxx원</span>

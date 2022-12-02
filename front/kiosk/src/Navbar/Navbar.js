@@ -6,14 +6,14 @@ function App() {
   return (
       <nav className={styles.wrapper}>
           <div className={styles.menu}>
-              <Link to='/Main' className={styles.main}>
-                  <span>버거</span>
+              <Link to='/Main' style={{textDecoration: "none"}}>
+                  <span className={styles.main}>버거</span>
               </Link>
-              <Link to='/Beverage' className={styles.beverage}>
-                  <span>음료</span>
+              <Link to='/Beverage' style={{textDecoration: "none"}}>
+                  <span className={styles.beverage}>음료</span>
               </Link>
-              <Link to='/Sidemenu' className={styles.sidemenu}>
-                  <span>사이드 메뉴</span>
+              <Link to='/Sidemenu' style={{textDecoration: "none"}}>
+                  <span className={styles.sidemenu}>사이드 메뉴</span>
               </Link>
           </div>
       </nav>

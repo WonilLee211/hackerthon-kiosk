@@ -6,30 +6,12 @@
     background: #FFE4E1;
 }
 
-.Title{
-    position: absolute;
-    width: 66px;
-    height: 29px;
-    left: 154px;
-    top: 0px;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: -0.165px;
-    
-    color: #000000;
-}
-
 .bottombox1 {
     position: absolute;
     width: max-content;
     height: 50px;
+    left: 0px;
+    bottom: 0px;
 
     color: #484040;
 }
@@ -38,6 +20,8 @@
     position: absolute;
     width: max-content;
     height: 50px;
+    left: 0px;
+    bottom: 50px;
 
     color: #292929;
 }

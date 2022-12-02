@@ -5,18 +5,15 @@ import styles from './Navbar.module.css';
 function App() {
   return (
       <nav className={styles.wrapper}>
-          <div>
-              <Link to='/Main'>
-                  <span className={styles.main}></span>
+          <div className={styles.menu}>
+              <Link to='/Main' className={styles.main}>
+                  <span>버거</span>
               </Link>
-              <Link to='/Burger'>
-                  <span className={styles.burger}></span>
+              <Link to='/Beverage' className={styles.beverage}>
+                  <span>음료</span>
               </Link>
-              <Link to='/Beverage'>
-                  <span className={styles.beverage}></span>
-              </Link>
-              <Link to='/Sidemenu'>
-                  <span className={styles.sidemenu}></span>
+              <Link to='/Sidemenu' className={styles.sidemenu}>
+                  <span>사이드 메뉴</span>
               </Link>
           </div>
       </nav>

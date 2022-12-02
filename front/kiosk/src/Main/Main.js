@@ -13,20 +13,20 @@ function App() {
     }, [])
 
     const getProduct = (event) => {
-        axios.get("") // request∫∏≥æ∂ß, 8∞≥∏∏ ∫∏≥ª¡÷∂Û∞Ì body∂˚ ∞∞¿Ã ∫∏≥ø
+        axios.get("") // requestÎ≥¥ÎÇºÎïå, 8Í∞úÎßå Î≥¥ÎÇ¥Ï£ºÎùºÍ≥† bodyÎûë Í∞ôÏù¥ Î≥¥ÎÉÑ
         .then(function(response){
             // setProducts(response.data);
         }).catch(function(event){
-            // alert("ªÛ«∞∏Ò∑œ¿ª ∞°¡Æø¿¥¬µ• Ω«∆–«ﬂΩ¿¥œ¥Ÿ.");
+            // alert("ÏÉÅÌíàÎ™©Î°ùÏùÑ Í∞ÄÏ†∏Ïò§ÎäîÎç∞ Ïã§Ìå®ÌñàÏäµÎãàÎã§.");
         })
     }
 
     const renderCards = Products.map((product, index) => {
         return <Col key={index}> 
             <Card className={styles.card}
-                // cover = {Products.length > 6 ? <img src={Products.slice(0,6)}/> : <img src={product.files}/>} //∞°¡Æø¬ µ•¿Ã≈Õ¿« ¿ÃπÃ¡ˆ ∂ÁøÏ±‚
+                // cover = {Products.length > 6 ? <img src={Products.slice(0,6)}/> : <img src={product.files}/>} //Í∞ÄÏ†∏Ïò® Îç∞Ïù¥ÌÑ∞Ïùò Ïù¥ÎØ∏ÏßÄ ÎùÑÏö∞Í∏∞
                 // title={product.Title}
-                // description={product.Description} // ªÛºº¡§∫∏ 
+                // description={product.Description} // ÏÉÅÏÑ∏Ï†ïÎ≥¥ 
             >
             </Card>
         </Col>
@@ -34,21 +34,19 @@ function App() {
 
     return (
         <div>
-            <div className={styles.mainbox}>
-                <Navbar />
-            </div>
+            <Navbar />
             
-            <Row>
+            {/* <Row>
                 {renderCards}  
-            </Row>
+            </Row> */}
 
             <div className={styles.bottombox2}>
-                <span className={styles.total}>√— ∞·¡¶ ±›æ◊</span>
-                <span className={styles.account}>x,xxxø¯</span>
+                <span className={styles.total}>Ï¥ù Í≤∞Ï†ú Í∏àÏï°</span>
+                <span className={styles.account}>x,xxxÏõê</span>
             </div>
             <div className={styles.bottombox1}>
                 <Link to=''>
-                    <span className={styles.calbtn}>∞·¡¶«œ±‚</span>
+                    <span className={styles.calbtn}>Í≤∞Ï†úÌïòÍ∏∞</span>
                 </Link>
             </div>
         </div>

@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from rest_framework import status
 from rest_framework.decorators import api_view
 from .serializers import BurgerSerializer, BeverageSerializer, SidedishSerializer
 from .models import Burger, Sidedish, Beverage
@@ -46,20 +47,19 @@ def makeDB(request):
         
 
 @api_view(['GET'])
-def menus(request):
-    pass
-
-
-@api_view(['GET'])
 def burgers(request):
     _burgers = Burger.objects.all()
     serializer = BurgerSerializer(_burgers, many=True)
+    serializer.is_valid()
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
 def burger_r(request, burger_name):
-    pass
+    _burger = get_object_or_404(Burger, name=burger_name)
+    serializer = BurgerSerializer(data=_burger)
+    serializer.is_valid()
+    return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
@@ -71,7 +71,10 @@ def beverages(request):
 
 @api_view(['GET'])
 def beverage_r(request, beverage_name):
-    pass
+    _beverage = get_object_or_404(Beverage, name=beverage_name)
+    serializer = BurgerSerializer(data=_beverage)
+    serializer.is_valid()
+    return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
@@ -82,5 +85,8 @@ def sides(request):
 
 
 @api_view(['GET'])
-def side_r(request, beverage_name):
-    pass
+def side_r(request, side_name):
+    _side = get_object_or_404(Sidedish, name=side_name)
+    serializer = BurgerSerializer(data=_side)
+    serializer.is_valid()
+    return Response(serializer.data, status=status.HTTP_200_OK)

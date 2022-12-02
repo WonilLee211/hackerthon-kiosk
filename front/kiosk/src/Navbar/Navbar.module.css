@@ -1,0 +1,65 @@
+.wrapper {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    color: #C4C4C4;
+  }
+  
+  /* nav태그 아래의 자식들을 수평정렬하기 위한 설정 */
+  nav {
+    overflow: hidden;
+    border-top: 3px solid #FFE4E1;
+    width: 375px;
+    height: 70px;
+  }
+  /* nav태그 아래의 div태그들을 수평정렬 및 세로길이 설정 */
+  nav > div {
+    /* 수평정렬, 5개의 button을 각각 20% width만큼 할당 */
+   width: 300px;
+   float: left;
+   text-align: center;
+    
+  
+    /* 세로길이 설정 */
+    height: 45px;
+    line-height: 40px;
+  }
+
+.main {
+    position: absolute;
+    left: 40px;
+    bottom: 3px;
+    color: #C4C4C4;
+}
+
+.burger {
+    position: absolute;
+    left: 235px;
+    bottom: 3px;
+    color: #C4C4C4;
+}
+
+.beverage {
+    position: absolute;
+    left: 105px;
+    bottom: 3px;
+    color: #C4C4C4;
+}
+
+.sidemenu {
+    position: absolute;
+    left: 170px;
+    bottom: 3px;
+    color: #C4C4C4;
+}
+
+
+/*.format
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+}*/

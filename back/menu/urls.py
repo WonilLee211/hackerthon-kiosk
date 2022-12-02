@@ -2,9 +2,6 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    # menus
-    path('menus/', views.menus, name='menus'),
-
     # burgers
     path('burgers/', views.burgers, name='burgers'),
     path('burger/<str:burger_name>/', views.burger_r, name='burger_r'),

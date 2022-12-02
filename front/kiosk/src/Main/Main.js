@@ -37,9 +37,9 @@ function App() {
         <div>
             <Navbar />
             
-            {/* <Row>
+            <Row>
                 {renderCards}  
-            </Row> */}
+            </Row>
 
             <div className={styles.qrbox}>
                 <img src={qrcode} /> <br />

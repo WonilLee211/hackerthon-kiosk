@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import styles from './Navbar.module.css';
+import logo from '../assets/logo.png';
 
 function App() {
   return (
       <nav className={styles.wrapper}>
+          <img src={logo} />
           <div className={styles.menu}>
               <Link to='/Main' style={{textDecoration: "none"}}>
                   <span className={styles.main}>버거</span>
